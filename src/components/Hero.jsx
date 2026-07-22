@@ -1,4 +1,4 @@
-import "../styles/hero.css";
+import "../Styles/Hero.css";
 
 import logoCury from "../assets/logos/logo_cury.png";
 import logoRiva from "../assets/logos/logo_rivavendas.png";

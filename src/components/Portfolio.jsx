@@ -1,4 +1,4 @@
-import "../styles/portfolio.css";
+import "../Styles/Portfolio.css";
 import projetos from "../data/projetos";
 
 function Portfolio() {
