@@ -1,4 +1,4 @@
-import "../styles/servicos.css";
+import "../Styles/Servicos.css";
 
 function Servicos() {
   const servicos = [
