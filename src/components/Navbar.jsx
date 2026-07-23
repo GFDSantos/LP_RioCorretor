@@ -2,7 +2,7 @@ import "../Styles/Navbar.css";
 
 function Navbar() {
   return (
-    <header className="navbar">S
+    <header className="navbar">
       <div className="container navbar-container">
 
         <div className="logo">
