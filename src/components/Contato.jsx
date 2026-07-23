@@ -1,4 +1,5 @@
 import "../Styles/Contato.css";
+import { FaWhatsapp } from "react-icons/fa";
 
 function Contato() {
   return (
@@ -19,17 +20,10 @@ function Contato() {
             rel="noopener noreferrer"
             className="btn"
           >
-            📱 WhatsApp
+            <FaWhatsapp />
+            {" "}WhatsApp
           </a>
 
-          <a
-            href="https://www.linkedin.com/in/gilberto-santos-45565825/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-secundario"
-          >
-            💼 LinkedIn
-          </a>
         </div>
 
       </div>

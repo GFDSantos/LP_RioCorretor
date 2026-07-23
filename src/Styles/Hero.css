@@ -1,5 +1,9 @@
-.hero {
-   padding:35px 0 45px;
+#hero{
+    scroll-margin-top:80px;
+}
+
+.hero{
+    padding:55px 0 45px;
 }
 
 .hero-container{

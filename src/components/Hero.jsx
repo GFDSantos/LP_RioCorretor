@@ -11,9 +11,9 @@ function Hero() {
         {/* Texto */}
         <div className="hero-texto">
 
-          <span className="hero-tag">
+          <h2 className="hero-tag">
             Soluções Digitais para o Mercado Imobiliário
-          </span>
+          </h2>
 
           <h1>
             Transformando empreendimentos em experiências digitais.

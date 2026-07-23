@@ -1,4 +1,5 @@
 import "../Styles/Footer.css";
+import { FaWhatsapp } from "react-icons/fa";
 
 function Footer() {
   return (
@@ -13,15 +14,8 @@ function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            WhatsApp
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/gilberto-santos-45565825/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LinkedIn
+            <FaWhatsapp />
+            {" "}WhatsApp
           </a>
         </div>
 
