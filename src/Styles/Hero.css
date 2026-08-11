@@ -1,137 +1,215 @@
-#hero{
-    scroll-margin-top:80px;
+#hero {
+    scroll-margin-top: 80px;
 }
 
-.hero{
-    padding:55px 0 45px;
+.hero {
+    padding: 55px 0 45px;
 }
 
-.hero-container{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:30px;
-    align-items:center;
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
 }
 
-.hero-texto h1{
-    margin:12px 0;
-    font-size:2.0rem;
-    line-height:1.2;
-    color:var(--cor-secundaria);
+.hero-texto h1 {
+    margin: 12px 0;
+    font-size: 2rem;
+    line-height: 1.2;
+    color: var(--cor-secundaria);
 }
 
-.hero-texto p{
-    font-size:0.9rem;
-    margin-bottom:30px;
-    color:#555;
+.hero-texto p {
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+    color: #555;
 }
 
-.hero-tag{
-    display:inline-block;
-    color:var(--cor-primaria);
-    font-weight:700;
-    text-transform:uppercase;
-    letter-spacing:1.5px;
-    margin-bottom:10px;
+.hero-tag {
+    display: inline-block;
+    color: var(--cor-primaria);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
 }
 
-.hero-imagem{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    background:#FFF;
-    padding:22px;
-    max-width:360px;
-    margin:auto;
-    border-radius:18px;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
+/* ===================================================
+   BLOCO DAS CONSTRUTORAS
+   =================================================== */
+
+.hero-imagem {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 22px;
+    row-gap: 10px;
+
+    background: #fff;
+    padding: 20px;
+    width: 100%;
+    max-width: 360px;
+    margin: auto;
+
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
-.empresa{
-    width:100%;
-    text-align:center;
+/* Cada empresa */
+
+.empresa {
+    width: 100%;
+    text-align: center;
 }
 
-.logo-cury{
-    width:100px;
-    height:auto;
-    margin:0 auto 18px;
+/* CURY - coluna esquerda */
+
+.hero-imagem .empresa:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1 / span 2;
 }
 
-.logo-riva{
-    width:80px;
-    height:auto;
-    margin:0 auto 18px;
+/* RIVA - coluna direita, parte superior */
+
+.hero-imagem .empresa:nth-child(3) {
+    grid-column: 2;
+    grid-row: 1;
 }
 
-.empresa ul{
-    list-style:none;
-    padding:0;
-    margin:0;
+/* NOVOLAR - coluna direita, parte inferior */
+
+.hero-imagem .empresa:nth-child(5) {
+    grid-column: 2;
+    grid-row: 2;
 }
 
-.empresa li{
-    margin:8px 0;
-    font-size:0.9rem;
-    font-weight:500;
-    color:#555;
+/* Esconde as linhas divisórias no novo layout */
+
+.hero-imagem hr {
+    display: none;
 }
 
-.empresa p{
-    margin:0;
-    font-size:1rem;
-    font-weight:500;
-    color:#555;
+/* Logos */
+
+.logo-cury {
+    width: 90px;
+    height: auto;
+    margin: 0 auto 14px;
 }
 
-.hero-imagem hr{
-    width:100%;
-    border:none;
-    border-top:1px solid #E5E7EB;
-    margin:18px 0;
+.logo-riva {
+    width: 70px;
+    height: auto;
+    margin: 0 auto 12px;
 }
 
-@media (max-width:992px){
-    .hero{
-        min-height:auto;
-        padding:60px 0;
+.logo-novolar {
+    width: 100px;
+    height: auto;
+    margin: 0 auto 12px;
+}
+
+/* Listas */
+
+.empresa ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.empresa li {
+    margin: 7px 0;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: #555;
+}
+
+/* Texto da Riva */
+
+.empresa p {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #555;
+}
+
+
+/* ===================================================
+   TABLET
+   =================================================== */
+
+@media (max-width: 992px) {
+
+    .hero {
+        min-height: auto;
+        padding: 60px 0;
     }
 
-    .hero-container{
-        grid-template-columns:1fr;
-        gap:40px;
-        text-align:center;
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
     }
 
-    .hero-texto h1{
-        font-size:2.2rem;
+    .hero-texto h1 {
+        font-size: 2.2rem;
     }
-
 }
 
-@media (max-width:768px){
-    .hero{
-        padding:40px 0;
+
+/* ===================================================
+   MOBILE
+   =================================================== */
+
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 40px 0;
     }
 
-    .hero-texto h1{
-        font-size:1.9rem;
+    .hero-texto h1 {
+        font-size: 1.9rem;
     }
 
-    .hero-texto p{
-        font-size:1rem;
+    .hero-texto p {
+        font-size: 1rem;
     }
 
-    .hero-imagem{
-        padding:25px;
+    /* Volta para uma coluna no celular */
+
+    .hero-imagem {
+        display: flex;
+        flex-direction: column;
+        padding: 25px;
+        max-width: 360px;
     }
 
-    .logo-cury{
-        width:120px;
+    .hero-imagem .empresa:nth-child(1),
+    .hero-imagem .empresa:nth-child(3),
+    .hero-imagem .empresa:nth-child(5) {
+        display: block;
     }
 
-    .logo-riva{
-        width:95px;
+    /* Divisórias voltam no mobile */
+
+    .hero-imagem hr {
+        display: block;
+        width: 100%;
+        border: none;
+        border-top: 1px solid #e5e7eb;
+        margin: 18px 0;
+    }
+
+    .logo-cury {
+        width: 120px;
+    }
+
+    .logo-riva {
+        width: 95px;
+    }
+
+    .logo-novolar {
+        width: 120px;
     }
 }
