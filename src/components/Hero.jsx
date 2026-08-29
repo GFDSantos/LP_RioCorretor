@@ -1,90 +1,65 @@
+import { useState, useEffect } from "react";
 import "../Styles/Hero.css";
+import construtoras from "../data/construtoras";
 
-import logoCury from "../assets/logos/logo_cury.png";
-import logoRiva from "../assets/logos/logo_rivavendas.png";
-import logoNovolar from "../assets/logos/logo_novolar.png";
+const INTERVALO_MS = 4000;
 
 function Hero() {
+  const [indiceAtual, setIndiceAtual] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setIndiceAtual((prev) => (prev + 1) % construtoras.length);
+    }, INTERVALO_MS);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const construtoraAtual = construtoras[indiceAtual];
+
   return (
     <section id="hero" className="hero">
       <div className="container hero-container">
 
-        {/* Texto */}
+        {/* Texto — fixo */}
         <div className="hero-texto">
-
           <h2 className="hero-tag">
             Soluções Digitais para o Mercado Imobiliário
           </h2>
-
-          <h1>
-            Transformando empreendimentos em experiências digitais.
-          </h1>
-
+          <h1>Transformando empreendimentos em experiências digitais.</h1>
           <p>
             Landing Pages, Sites e Portais Imobiliários desenvolvidos para
             construtoras, incorporadoras, imobiliárias e corretores de imóveis.
           </p>
-
-          <a href="#portfolio" className="btn">
-            Conheça meus projetos
-          </a>
-
+          <a href="#portfolio" className="btn">Conheça meus projetos</a>
         </div>
 
-        {/* Logos */}
-        <div className="hero-imagem">
-
-          {/* CURY */}
-          <div className="empresa">
-
+        {/* Carrossel — lado direito */}
+        <div className="hero-carrossel">
+          <div className="carrossel-slide" key={construtoraAtual.id}>
             <img
-              src={logoCury}
-              alt="Cury Vendas"
-              className="logo-cury"
+              src={construtoraAtual.logo}
+              alt={construtoraAtual.alt}
+              className="carrossel-logo"
             />
-
             <ul>
-              <li>Orla Central</li>
-              <li>Caminhos da Guanabara</li>
-              <li>Saudosa Praça XI</li>
-              <li>Nova Leopoldina</li>
+              {construtoraAtual.empreendimentos.map((nome) => (
+                <li key={nome}>{nome}</li>
+              ))}
             </ul>
-
           </div>
 
-          <hr />
-
-          {/* RIVA */}
-          <div className="empresa">
-
-            <img
-              src={logoRiva}
-              alt="Riva Vendas"
-              className="logo-riva"
-            />
-
-            <p>Portal Imobiliário</p>
-
+          <div className="carrossel-dots">
+            {construtoras.map((c, i) => (
+              <button
+                key={c.id}
+                type="button"
+                aria-label={`Ver ${c.alt}`}
+                className={`dot ${i === indiceAtual ? "ativo" : ""}`}
+                onClick={() => setIndiceAtual(i)}
+              />
+            ))}
           </div>
-
-          <hr />
-
-          {/* NOVOLAR */}
-          <div className="empresa">
-
-            <img
-              src={logoNovolar}
-              alt="Novolar"
-              className="logo-novolar"
-            />
-
-            <ul>
-              <li>Novolar</li>
-              <li>Village Park</li>
-            </ul>
-
-          </div>
-
         </div>
 
       </div>

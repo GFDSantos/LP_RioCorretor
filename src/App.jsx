@@ -19,7 +19,6 @@ function App() {
         <Servicos />
         <Contato />
       </main>
-
       <Footer />
       <BotaoWhatsApp />
     </>

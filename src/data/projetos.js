@@ -4,6 +4,9 @@ import saudosa from "../assets/images/portfolio/fachadasaudosa.png";
 import riva from "../assets/images/portfolio/rivavendas.png";
 import novolar from "../assets/images/portfolio/gourmetrooftop.png";
 import villagepark from "../assets/images/portfolio/guaritapv.jpg";
+import ritmosPilares from "../assets/images/portfolio/implantacaotorresritmos.jpg";
+import connectSquare from "../assets/images/portfolio/fachadaconnectsquare.png";
+import elevatoBonsucesso from "../assets/images/portfolio/espacoclubeelevato.png";
 import novaLeopoldina from "../assets/images/portfolio/perspectivanovaleopoldina.png";
 
 const projetos = [
@@ -75,6 +78,35 @@ const projetos = [
     descricao:
       "Landing Page para apresentação do empreendimento Village Park.",
     link: "https://villagepark.riocorretor.com.br",
+  },
+    {
+    id: 8,
+    nome: "Ritmos de Pilares",
+    empresa: "MRV",
+    imagem: ritmosPilares,
+    descricao:
+      "Landing Page para apresentação do empreendimento Ritmos de Pilares.",
+    link: "https://ritmosdepilares.riocorretor.com.br",
+  },
+
+  {
+    id: 9,
+    nome: "Connect Square",
+    empresa: "Patrimar",
+    imagem: connectSquare,
+    descricao:
+      "Landing Page para apresentação do empreendimento Connect Square.",
+    link: "https://connectsquare.riocorretor.com.br",
+  },
+
+  {
+    id: 10,
+    nome: "Elevato Bonsucesso",
+    empresa: "Tenda",
+    imagem: elevatoBonsucesso,
+    descricao:
+      "Landing Page para apresentação do empreendimento Elevato Bonsucesso.",
+    link: "https://elevatobonsucesso.riocorretor.com.br",
   },
 ];
 
