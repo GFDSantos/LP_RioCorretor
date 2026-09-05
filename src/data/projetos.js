@@ -8,6 +8,7 @@ import ritmosPilares from "../assets/images/portfolio/implantacaotorresritmos.jp
 import connectSquare from "../assets/images/portfolio/fachadaconnectsquare.png";
 import elevatoBonsucesso from "../assets/images/portfolio/espacoclubeelevato.png";
 import novaLeopoldina from "../assets/images/portfolio/perspectivanovaleopoldina.png";
+import cittaRivaGranTijuca from "../assets/images/portfolio/fachada.png";
 
 const projetos = [
   {
@@ -107,6 +108,15 @@ const projetos = [
     descricao:
       "Landing Page para apresentação do empreendimento Elevato Bonsucesso.",
     link: "https://elevatobonsucesso.riocorretor.com.br",
+  },
+  {
+    id: 11,
+    nome: "Citta Riva Gran Tijuca",
+    empresa: "Riva Vendas",
+    imagem: cittaRivaGranTijuca,
+    descricao:
+      "Landing Page para apresentação do empreendimento Citta Riva Gran Tijuca.",
+    link: "https://rivagrantijuca.riocorretor.com.br",
   },
 ];
 
