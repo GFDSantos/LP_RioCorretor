@@ -8,7 +8,7 @@ import ritmosPilares from "../assets/images/portfolio/implantacaotorresritmos.jp
 import connectSquare from "../assets/images/portfolio/fachadaconnectsquare.png";
 import elevatoBonsucesso from "../assets/images/portfolio/espacoclubeelevato.png";
 import novaLeopoldina from "../assets/images/portfolio/perspectivanovaleopoldina.png";
-import cittaRivaGranTijuca from "../assets/images/portfolio/fachada.png";
+import cittaRivaGranTijuca from "../assets/images/portfolio/fachadacittariva.png";
 
 const projetos = [
   {
